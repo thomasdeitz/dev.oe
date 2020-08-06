@@ -5,10 +5,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <style>
-        body {
-            color: #333533;
+        :root {
+            --color-primary: #8BA799;
+            --color-pop: #F5CB5C;
+            --color-text: #242423;
+            --color-text-2: #333533;
+            --color-bg: #FFFFFF;
+            --color-nuetral-1: #B9CAC2;
+            --color-nuetral-2: #CFDBD5;
+            --color-nuetral-3: #DDE4E1;
+            --color-nuetral-4: #F4F6F5;
+
+            background: linear-gradient(var(--color-primary) 50%, var(--color-text-2) 50%);
+            background-color: var(--color-nuetral-1);
+            color: var(--color-text);
             font-family: 'Open Sans', sans-serif;
+            font-size: 21px;
+            line-height: 1.5em;
+            overflow: visible;
+        }
+
+        p {
             font-size: 18px;
+            margin-bottom: 18px;
+        }
+
+        .lead {
+            font-size: 24px;
         }
 
         small {
@@ -16,58 +39,90 @@
             font-size: 12px;
         }
 
+        body {
+            background: white;
+        }
+
         body>* {
-            display: grid;
-            grid-gap: 20px;
-            grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+            display: flex;
+            flex-direction: column;
+            padding: 140px 0;
             align-items: center;
         }
 
-        header {
-            background: #B9CAC2;
-            padding: 140px 20%;
+        .container {
+            display: block;
+            max-width: 1200px;
+            width: 70%;
+            margin: auto;
+        }
 
+        .grid {
+            display: grid;
+            grid-gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+        }
 
+        #marquee {
+            background-color: var(--color-nuetral-1);
+        }
+
+        #marquee .grid {
+            align-items: center;
+        }
+
+        #competetive-advantage {
+            background: linear-gradient(to right, var(--color-nuetral-4) 50%, var(--color-nuetral-3) 50%);
+        }
+
+        hr {
+            border: none;
+            border-bottom: 1px solid var(--color-nuetral-2);
+            width: 60%;
+            margin: 70px 20%;
         }
 
         h1 {
-            font-size: 48px;
-            margin-bottom: 24px;
+            font-size: 60px;
+            margin-bottom: 42px;
             font-family: 'Noto Serif', serif;
         }
 
         h2 {
-            font-size: 32px;
-            margin-bottom: 24px;
+            font-size: 42px;
+            margin-bottom: 42px;
+            font-family: 'Noto Serif', serif;
         }
 
         h3 {
-            font-size: 24px;
+            font-size: 32px;
             margin-bottom: 18px;
             font-family: 'Noto Serif', serif;
             text-transform: capitalize;
         }
 
         section {
-            background: white;
-            padding: 100px 20%;
             text-align: center;
         }
 
-        section:nth-of-type(3) {
-            display: flex;
-            background-color: #F4F6F5;
-            flex-direction: row;
+        #contact-form {
+            background-color: var(--color-pop);
         }
 
-        section:nth-of-type(5) {
-            display: flex;
-            background-color: #F5CB5C;
-            flex-direction: row;
+        #contact-form img {
+            width: auto;
+            height: 100px;
+            margin-bottom: 2em;
         }
 
-        section:nth-of-type(2)>*:not(:first-child) {
-            padding-left: 20px
+        #overview {
+            background-color: var(--color-nuetral-4);
+        }
+
+        #solution img {
+            width: 60%;
+            height: auto;
+            margin-bottom: 2em;
         }
 
         section h2 {
@@ -75,86 +130,131 @@
         }
 
         footer {
-            background-color: #333533;
+            background-color: var(--color-text-2);
             color: white;
             padding: 100px 20%;
+            text-align: center;
         }
 
+        input,
         button {
-            color: white;
-            background-color: #333533;
+
             padding: 12px 24px;
             border: none;
             border-radius: 8px;
             font-family: 'Noto Serif', serif;
             font-size: 18px;
         }
+
+        button {
+            color: white;
+            background-color: var(--color-text);
+        }
+
+        input {
+            background-color: white;
+            color: var(--color-text);
+            margin-right: 10px;
+        }
+
+        ul {
+            list-style: disc;
+            font-size: 21px;
+        }
     </style>
 </head>
 
 <body>
-    <header>
-        <div>
-            <h1>The <br />Office Elephant</h1>
-            <h2>Let’s talk about the Elephant in the room.</h2>
-            <button>Sign Up</button>
+    <header id="marquee">
+        <div class="container grid">
+            <div>
+                <h1>The <br />Office Elephant</h1>
+                <p class="lead">A platform that promotes Diversity, Equality, and Inclusion (DEI) in the workplace!</p>
+                <br />
+                <button>Stay In Touch</button>
+            </div>
+            <figure>
+                <img src="https://eep.io/images/yzco4xsimv0y/5wuCiHL81MYkH5ZFtRzzIM/6d5bf675ff5912eb2b72b09ba7d01fca/HomepageHero_Animation_Flowers.gif?w=760&amp;q=95"
+                    srcset="https://eep.io/images/yzco4xsimv0y/5wuCiHL81MYkH5ZFtRzzIM/6d5bf675ff5912eb2b72b09ba7d01fca/HomepageHero_Animation_Flowers.gif?w=760&amp;q=95 760w, https://eep.io/images/yzco4xsimv0y/5wuCiHL81MYkH5ZFtRzzIM/6d5bf675ff5912eb2b72b09ba7d01fca/HomepageHero_Animation_Flowers.gif?w=1520&amp;q=95 1520w"
+                    sizes="760px" alt="A bunch of flowers swaying on a browser bar">
+            </figure>
         </div>
-        <figure>
+    </header>
+    <!-- <section id="overview">
+        <div class="container">
+            <h2>Check your Stats! Be Educated! Be Informed! Be the Difference!</h2>
+        </div>
+    </section> -->
+    <section id="solution">
+        <div class="container">
+            <h2>Let’s talk about the Elephant in the room.</h2>
+            <hr />
+        </div>
+        <div class="container grid">
+            <div>
+                <img src="https://eep.io/images/yzco4xsimv0y/5wuCiHL81MYkH5ZFtRzzIM/6d5bf675ff5912eb2b72b09ba7d01fca/HomepageHero_Animation_Flowers.gif?w=760&amp;q=95"
+                    srcset="https://eep.io/images/yzco4xsimv0y/5wuCiHL81MYkH5ZFtRzzIM/6d5bf675ff5912eb2b72b09ba7d01fca/HomepageHero_Animation_Flowers.gif?w=760&amp;q=95 760w, https://eep.io/images/yzco4xsimv0y/5wuCiHL81MYkH5ZFtRzzIM/6d5bf675ff5912eb2b72b09ba7d01fca/HomepageHero_Animation_Flowers.gif?w=1520&amp;q=95 1520w"
+                    sizes="760px" alt="A bunch of flowers swaying on a browser bar">
+                <h3>Company Tracking</h3>
+                <p>Monitor racial hiring, gender diversity, wage equality and more.
+                </p>
+            </div>
+            <div>
+                <img src="https://eep.io/images/yzco4xsimv0y/5wuCiHL81MYkH5ZFtRzzIM/6d5bf675ff5912eb2b72b09ba7d01fca/HomepageHero_Animation_Flowers.gif?w=760&amp;q=95"
+                    srcset="https://eep.io/images/yzco4xsimv0y/5wuCiHL81MYkH5ZFtRzzIM/6d5bf675ff5912eb2b72b09ba7d01fca/HomepageHero_Animation_Flowers.gif?w=760&amp;q=95 760w, https://eep.io/images/yzco4xsimv0y/5wuCiHL81MYkH5ZFtRzzIM/6d5bf675ff5912eb2b72b09ba7d01fca/HomepageHero_Animation_Flowers.gif?w=1520&amp;q=95 1520w"
+                    sizes="760px" alt="A bunch of flowers swaying on a browser bar">
+                <h3>Transparency</h3>
+                <p>Employee portals for see-through relations with employers.</p>
+            </div>
+            <div>
+                <img src="https://eep.io/images/yzco4xsimv0y/5wuCiHL81MYkH5ZFtRzzIM/6d5bf675ff5912eb2b72b09ba7d01fca/HomepageHero_Animation_Flowers.gif?w=760&amp;q=95"
+                    srcset="https://eep.io/images/yzco4xsimv0y/5wuCiHL81MYkH5ZFtRzzIM/6d5bf675ff5912eb2b72b09ba7d01fca/HomepageHero_Animation_Flowers.gif?w=760&amp;q=95 760w, https://eep.io/images/yzco4xsimv0y/5wuCiHL81MYkH5ZFtRzzIM/6d5bf675ff5912eb2b72b09ba7d01fca/HomepageHero_Animation_Flowers.gif?w=1520&amp;q=95 1520w"
+                    sizes="760px" alt="A bunch of flowers swaying on a browser bar">
+                <h3>Positive Change</h3>
+                <p>Making a difference using positive affirmation.</p>
+            </div>
+        </div>
+    </section>
+    <!-- <section id="competetive-advantage">
+        <div class="container grid">
+            <div>
+                <h3>Them</h3>
+                <ul>
+                    <li>Employee policing</li>
+                    <li>Diversity retreats</li>
+                    <li>Sensitivity training</li>
+                    <li>Inclusión consultants</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Us</h3>
+                * First platform to market
+                * Focus on positive
+                interactions to promote real
+                change.
+                * Insightful transparency
+                between company and
+                employee
+            </div>
+        </div>
+    </section> -->
+    <section id="contact-form">
+        <div class="container">
             <img src="https://eep.io/images/yzco4xsimv0y/5wuCiHL81MYkH5ZFtRzzIM/6d5bf675ff5912eb2b72b09ba7d01fca/HomepageHero_Animation_Flowers.gif?w=760&amp;q=95"
                 srcset="https://eep.io/images/yzco4xsimv0y/5wuCiHL81MYkH5ZFtRzzIM/6d5bf675ff5912eb2b72b09ba7d01fca/HomepageHero_Animation_Flowers.gif?w=760&amp;q=95 760w, https://eep.io/images/yzco4xsimv0y/5wuCiHL81MYkH5ZFtRzzIM/6d5bf675ff5912eb2b72b09ba7d01fca/HomepageHero_Animation_Flowers.gif?w=1520&amp;q=95 1520w"
                 sizes="760px" alt="A bunch of flowers swaying on a browser bar">
-        </figure>
-    </header>
-    <section>
-        <h2>A platform that promotes Diversity, Equality, and Inclusion (DEI) in the workplace!</h2>
-    </section>
-    <section>
-        <div>
-            <h3>Company Tracking</h3>
-            *Racial hiring.
-            *Gender diversity.
-            *Wage equality.
+            <h2>Stay in touch and get updates!</h2>
         </div>
-        <div>
-            <h3>Transparency</h3>
-            Employee portals for see-through relations with employers.
+        <div class="container">
+            <input />
+            <button>Sign Up</button>
         </div>
-        <div>
-            <h3>Positive Change</h3>
-            Making a difference using positive affirmation.
-        </div>
-    </section>
-    <section>
-        <h2>Check your Stats!
-            Be Educated!
-            Be Informed!
-            Be the Difference!</h2>
-    </section>
-    <section>
-        <div>
-            <h3>Them</h3>
-            * Employee policing
-            * Diversity retreats
-            * Sensitivity training
-            * Inclusión consultants
-        </div>
-        <div>
-            <h3>Us</h3>
-            * First platform to market
-            * Focus on positive
-            interactions to promote real
-            change.
-            * Insightful transparency
-            between company and
-            employee
-        </div>
-    </section>
-    <section>
-        <h1>Stay in touch and get updates!</h1>
-        <input />
     </section>
     <footer>
-        <small>©2020 All Rights Reserved. Office Elephant</small></footer>
+        <div class="container">
+            <small>©2020 All Rights Reserved. The Office Elephant</small>
+        </div>
+    </footer>
 </body>
 
 </html>
