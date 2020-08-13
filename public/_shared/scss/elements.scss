@@ -1,0 +1,67 @@
+:root {
+    background: linear-gradient(var(--color-primary) 50%, var(--color-text-2) 50%);
+    background-color: map-get($colors, gray);
+    overflow: visible;
+}
+
+body {
+    background: map-get($colors, bg);
+}
+
+body>* {
+    display: flex;
+    flex-direction: column;
+    padding: 140px 0;
+    align-items: center;
+}
+
+#competetive-advantage {
+    background: linear-gradient(to right, var(--color-nuetral-4) 50%, var(--color-nuetral-3) 50%);
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid map-get($colors, gray-light);
+    width: 60%;
+    margin: 70px 20%;
+}
+
+section {
+    text-align: center;
+}
+
+
+
+section h2 {
+    text-align: center;
+}
+
+
+
+input,
+button,
+a {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Noto Serif', serif;
+    font-size: 18px;
+}
+
+a,
+button {
+    color: white;
+    background-color: map-get($colors, text);
+    text-decoration: none;
+}
+
+input {
+    background-color: map-get($colors, bg);
+    color: var(--color-text);
+    margin-right: 10px;
+}
+
+ul {
+    list-style: disc;
+    font-size: 21px;
+}

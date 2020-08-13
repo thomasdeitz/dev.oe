@@ -1,0 +1,56 @@
+$colors: (primary: #8BA799,
+  accent: #F5CB5C,
+  text: #242423,
+  text-secondary: #333533,
+  gray: #B9CAC2,
+  gray-light: #CFDBD5,
+  gray-lighter: #DDE4E1,
+  gray-lightest:#F4F6F5,
+  bg: white,
+  success: rgb(21, 153, 46),
+  warning: rgb(225, 173, 40),
+  error: rgb(165, 8, 58),
+);
+
+//$base-opacity: .3;
+//$base-bezier: cubic-bezier(0.07, -0.5, 0.93, 1.5);
+//$base-trans_duration: .3s;
+
+//$grid-config: (columns: 12,
+//  gutter-width: 4%);
+
+$base-padding: 30px;
+$tight-padding: $base-padding/2;
+$base-input-padding: $tight-padding;
+
+$border-width: 1px;
+$border-radius: 3px;
+
+$serif-font-family: "Times New Roman",
+sans-serif;
+$sans-font-family: "Nunito",
+sans-serif;
+$display-font-family: "Nunito",
+Impact,
+Helvetica,
+Arial,
+sans-serif;
+$base-font-size: 16px; //21px;
+$small-font-size: $base-font-size*.75;
+$large-font-size: $base-font-size*1.5;
+$h6-font-size: $base-font-size;
+$h5-font-size: $base-font-size*1.25;
+$h4-font-size: $base-font-size*1.75;
+$h3-font-size: $base-font-size*2;
+$h2-font-size: $base-font-size*2.5;
+$h1-font-size: $base-font-size*3;
+
+$on-desktop: 1280px;
+$on-laptop: 1024px;
+$on-palm: 768px;
+
+$breakpoints: ( //list small to large.
+  sm : (ul: $on-palm),
+  md : (ll: $on-palm, ul: #{$on-laptop} - 1),
+  lg : (ll: $on-laptop, ul: #{$on-desktop} - 1),
+  xl : (ll: $on-desktop));

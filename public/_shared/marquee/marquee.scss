@@ -1,0 +1,7 @@
+#marquee {
+  background-color: map-get($colors, gray);
+
+  .grid {
+    align-items: center;
+  }
+}

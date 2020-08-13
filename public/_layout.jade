@@ -1,0 +1,25 @@
+if current.path != "robots.txt"
+	html
+		head
+			title= title
+			meta( charset="utf-8" )
+			meta( name="description" content="#{ description }")
+			meta( name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+	
+			meta( property="og:title" content="#{ title }" )
+			meta( property="og:description" content="#{ description }")
+			meta( property="og:url" content="#{ github_deploy }" )
+			meta( property="og:image" content="#{ marquee_image }" )
+	
+			script( src="#{ github_deploy }/assets/js/app.js" )
+			link( rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap")
+			link( rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap")
+			link( rel="stylesheet" href="#{ github_deploy }/assets/styles/main.css" )
+			link( rel="icon" type="image/png" href="#{ github_deploy }/assets/images/favicon.png" )
+	
+		!=partial("_shared/gtag")
+		body.loading
+			!= yield
+			!= partial("_shared/footer/footer")
+else
+	!= yield

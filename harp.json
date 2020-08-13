@@ -1,0 +1,26 @@
+{
+	"globals": {
+		"github_deploy": "",
+		"env": "prod",
+		"form_spree": "",
+		"title": "Office Elephant",
+		"description": "",
+		"social": [
+			{
+				"slug": "twitter",
+				"un": "",
+				"url": ""
+			},
+			{
+				"slug": "facebook",
+				"un": "",
+				"url": ""
+			},
+			{
+				"slug": "linkedin",
+				"un": "",
+				"url": ""
+			}
+		]
+	}
+}

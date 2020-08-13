@@ -1,0 +1,9 @@
+#contact-form {
+    background-color: map-get($colors, accent);
+
+    img {
+        width: auto;
+        height: 100px;
+        margin-bottom: 2em;
+    }
+}
